@@ -16,9 +16,12 @@ def get_keywords_from_sheet():
 
         if not values:
             print('no data found')
-        else:
-            print('keywords retrieved:')
-            for row in values:
-                print(row[0])
+            return []
+        
+        keywords=[row[0] for row in values if row]
+        print('keywords retreived :',keywords)
+        return keywords
+        
     except HttpError as err:
         print(f"an error occured:{err}")
+        return []
