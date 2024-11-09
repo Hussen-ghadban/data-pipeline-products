@@ -2,7 +2,6 @@ from playwright.sync_api import sync_playwright
 
 def fetch_aliexpress(keyword):
     search_url=f'https://www.aliexpress.com/w/wholesale-{keyword.replace(" ", "-")}.html'
-    # search_url=f'https://www.aliexpress.com/w/wholesale-{keyword.replace(" ", "-")}.html'
     with sync_playwright() as p:
         browser=p.chromium.launch(headless=True)
         context=browser.new_context(
