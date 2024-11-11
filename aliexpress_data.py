@@ -18,13 +18,13 @@ def fetch_aliexpress(keyword):
             title=product.query_selector('.multi--titleText--nXeOvyr').inner_text().strip()
             description=product.query_selector('.multi--titleText--nXeOvyr').inner_text().strip()
             price=product.query_selector('.multi--price-sale--U-S0jtj').inner_text().strip()
-            link=product.query_selector('.multi--container--1UZxxHY ').inner_text().strip()
+            link="https:"+product.query_selector('.multi--container--1UZxxHY ').get_attribute('href')
             product_data.append({
                 "Title":title,
                 "Description":description, 
                 "Product Link":link, 
                 "Price":price, 
-                "Website Source":"Ali Express"
+                "Website Source":"aliexpress.com"
                 })
         browser.close()
         return product_data
