@@ -44,18 +44,24 @@ This project fetches product data from multiple eCommerce websites (like DHGate,
    YOUTUBE_API_KEY=your_youtube_api_key
    ```
 
+   -Install the required packges:
+
    ```bash
       pip install -r requirements.txt
    ```
 
 6. **Google Sheet Setup**:
    -create a config.py file and write inside your as follows:
+   ```bash
    SPREADSHEET_ID_USER_INPUT = "your-user-input-spreadsheet-id"
    SPREADSHEET_ID_PRODUCT_DATA = "your-ecommerce-product-data-spreadsheet-id"
    SPREADSHEET_ID_MULTIMEDIA_CONTENT_DATA = "your-youtube-data-spreadsheet-id"
+   ```
 
 - Update the spreadsheet IDs and ranges in the code to match your Google Sheets.
 
-```
+7. **Run The Project**:
 
+```bash
+python main.py
 ```
