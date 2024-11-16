@@ -21,7 +21,7 @@ This project fetches product data from multiple eCommerce websites (like DHGate,
 4. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/your-repository-url.git
+   git clone https://github.com/Hussen-ghadban/data-pipeline-products.git
    cd your-repository-folder
    ```
 
