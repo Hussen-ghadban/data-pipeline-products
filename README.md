@@ -27,29 +27,35 @@ This project fetches product data from multiple eCommerce websites (like DHGate,
 
 5. **Environment Setup**: Install the required Python packages using:
    -Create a Virtual Environment:
+
    ```bash
    python -m venv venv
    ```
+
    -Activate the Virtual Environment:
+
    ```bash
    venv\Scripts\activate
    ```
+
    -Create a .env file in the root directory and add your YouTube API Key:
+
    ```bash
    YOUTUBE_API_KEY=your_youtube_api_key
    ```
 
-````
-
-```bash
-pip install -r requirements.txt
-```
+   ```bash
+      pip install -r requirements.txt
+   ```
 
 6. **Google Sheet Setup**:
-  -create a config.py file and write inside your as follows:
-    SPREADSHEET_ID_USER_INPUT = "your-user-input-spreadsheet-id"
-    SPREADSHEET_ID_PRODUCT_DATA = "your-ecommerce-product-data-spreadsheet-id"
-    SPREADSHEET_ID_MULTIMEDIA_CONTENT_DATA = "your-youtube-data-spreadsheet-id"
+   -create a config.py file and write inside your as follows:
+   SPREADSHEET_ID_USER_INPUT = "your-user-input-spreadsheet-id"
+   SPREADSHEET_ID_PRODUCT_DATA = "your-ecommerce-product-data-spreadsheet-id"
+   SPREADSHEET_ID_MULTIMEDIA_CONTENT_DATA = "your-youtube-data-spreadsheet-id"
 
-  - Update the spreadsheet IDs and ranges in the code to match your Google Sheets.
-````
+- Update the spreadsheet IDs and ranges in the code to match your Google Sheets.
+
+```
+
+```
