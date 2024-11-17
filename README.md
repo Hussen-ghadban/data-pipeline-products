@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-This project fetches product data from multiple eCommerce websites (like DHGate, Alibaba, AliExpress, etc.) based on user-input keywords from a Google Sheet. Additionally, it fetches YouTube video data related to those keywords and writes both eCommerce and YouTube data to separate Google Sheets. The project demonstrates skills in web scraping, API integration, and cloud services (Google Sheets API).
+This project fetches product data from multiple eCommerce websites (like DHGate, Gearbest, AliExpress) based on user-input keywords from a Google Sheet. Additionally, it fetches YouTube video data related to those keywords and writes both eCommerce and YouTube data to separate Google Sheets. The project demonstrates skills in web scraping, API integration, and cloud services (Google Sheets API).
 
 ### Prerequisites
 
@@ -67,7 +67,7 @@ python main.py
 ```
 
 8. **Challenges Faced in the Project:**
-   - One of the biggest challenges I encountered was with web scraping. The web scraping code would sometimes work perfectly when running the script individually, but it would intermittently fail when the same code was called within the main project script. This inconsistency made debugging particularly challenging. The issue required careful handling of exceptions, retries, and adjustments in the web scraping logic to ensure reliable performance, also kept some web scraping for ecommerce webites in the code but didn't run them.
-   - When i create the token based on credentials file it would in a form that will ask me to login every time i use google sheets API service, so i reformatted it so i only need to login once.
+   - One of the biggest challenges I encountered was with web scraping. The web scraping code would sometimes work perfectly when running the script individually, but it would intermittently fail when the same code was called within the main project script. This inconsistency made debugging particularly challenging. The issue required careful handling of exceptions, retries, and adjustments in the web scraping logic to ensure reliable performance.
+   - When i create the token based on credentials file it would be in a form that will ask me to login every time i use google sheets API service, so i reformatted it so i only need to login once.
    - For fetching from youtube API i ahd to search for on how to fetch it and edit to fit my needs in the project.
    - Instead of creating a separate class for each ecommerce website, an ecommerceScraper class was developed to handle multiple websites, based on recognizing that the core scraping logic is similar across websites, and the differences lie mainly in selectors and URL patterns.
