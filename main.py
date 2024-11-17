@@ -42,23 +42,23 @@ def main():
 
     # fetching the data
     for keyword in keywords:
-        # try:
-        #     dhgate=dhgate_search.fetch_data(keyword[0])
-        #     dhgate_results+=dhgate
-        # except Exception as e:
-        #     print(f"Failed to fetch DHGate data for '{keyword}': {e}")
+        try:
+            dhgate=dhgate_search.fetch_data(keyword[0])
+            dhgate_results+=dhgate
+        except Exception as e:
+            print(f"Failed to fetch DHGate data for '{keyword}': {e}")
 
-        # try:
-        #     gearbest = gear_search.fetch_data(keyword[0]) 
-        #     gearbest_results+=gearbest
-        # except Exception as e:
-        #     print(f"Failed to fetch GearBest data for '{keyword}': {e}")
+        try:
+            gearbest = gear_search.fetch_data(keyword[0]) 
+            gearbest_results+=gearbest
+        except Exception as e:
+            print(f"Failed to fetch GearBest data for '{keyword}': {e}")
  
-        # try:
-        #     aliexpress = aliexpress_search.fetch_data(keyword[0]) 
-        #     aliexpress_results+=aliexpress
-        # except Exception as e:
-        #     print(f"Failed to fetch AliExpress data for '{keyword}': {e}")
+        try:
+            aliexpress = aliexpress_search.fetch_data(keyword[0]) 
+            aliexpress_results+=aliexpress
+        except Exception as e:
+            print(f"Failed to fetch AliExpress data for '{keyword}': {e}")
 
         try:
             youtube = youtube_search.search_youtube_videos(keyword[0])
@@ -72,7 +72,7 @@ def main():
     ecommerce_results=dhgate_results+aliexpress_results+gearbest_results
     print(ecommerce_results)
     # writing youtube results to ecommerce webistes googlesheet
-    # ecommerce_writer.write_data_to_sheet(ecommerce_results, ecommerce_headers)
+    ecommerce_writer.write_data_to_sheet(ecommerce_results, ecommerce_headers)
 
     print("Cells Updated")
 if __name__=='__main__':

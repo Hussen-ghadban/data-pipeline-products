@@ -17,7 +17,7 @@ class EcommerceScraper:
             formatted_keyword = keyword.replace(" ", self.space_replacement)
             search_url = self.search_url_template.format(keyword=formatted_keyword)
             product_data = []
-
+            #launch the browser
             with sync_playwright() as p:
                 browser = p.chromium.launch(headless=False)
                 context = browser.new_context(
@@ -27,7 +27,7 @@ class EcommerceScraper:
                 page = context.new_page()
                 page.goto(search_url)
                 
-                # Wait for the container to load, specific for each child class
+                # Wait for the container to load
                 page.wait_for_selector(self.container_selector)
                 
                 # Select the products
